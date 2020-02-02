@@ -5,4 +5,66 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
 
+
+    <!-- Weather icons -->
+    <string name="icon_clear_sky_day" translatable="false"></string>
+    <string name="icon_clear_sky_night" translatable="false"></string>
+    <string name="icon_few_clouds_day" translatable="false"></string>
+    <string name="icon_few_clouds_night" translatable="false"></string>
+    <string name="icon_scattered_clouds" translatable="false"></string>
+    <string name="icon_broken_clouds" translatable="false"></string>
+    <string name="icon_shower_rain" translatable="false"></string>
+    <string name="icon_rain_day" translatable="false"></string>
+    <string name="icon_rain_night" translatable="false"></string>
+    <string name="icon_thunderstorm" translatable="false"></string>
+    <string name="icon_snow" translatable="false"></string>
+    <string name="icon_mist" translatable="false"></string>
+    <string name="icon_weather_default" translatable="false"></string>
+    <string name="icon_wind" translatable="false"></string>
+    <string name="icon_humidity" translatable="false"></string>
+    <string name="icon_barometer" translatable="false"></string>
+    <string name="icon_cloudiness" translatable="false"></string>
+    <string name="icon_sunrise" translatable="false"></string>
+    <string name="icon_sunset" translatable="false"></string>
+
+    <!-- Units and Measurement-->
+    <string name="percent_sign" translatable="false">\u0025</string>
+    <string name="temperature_with_degree" translatable="false">%s\u00B0</string>
+    <string name="pressure_measurement">hPa</string>
+    <string name="wind_speed_meters">m/s</string>
+    <string name="wind_speed_miles">mph</string>
+
+
+    <!-- Weather conditions label strings -->
+    <string name="wind_label" translatable="false">Wind: %1$s %2$s</string>
+    <string name="humidity_label" translatable="false">Humidity: %1$s%2$s</string>
+    <string name="pressure_label" translatable="false">Pressure: %1$s %2$s</string>
+    <string name="cloudiness_label" translatable="false">Cloudiness: %1$s%2$s</string>
+    <string name="last_update_label" translatable="false">Last update: %s</string>
+    <string name="sunrise_label" translatable="false">Sunrise: %s</string>
+    <string name="sunset_label" translatable="false">Sunset: %s</string>
+
+
+    <!-- Permission strings -->
+    <string name="permission_location_rationale">Location Permissions are needed to determine the current city</string>
+    <string name="permission_not_granted">Permissions were not granted!</string>
+    <string name="permission_available_location">Location Permissions have been granted</string>
+
+    <!-- Toast messages -->
+    <string name="connection_not_found">Check your internet connection</string>
+    <string name="toast_parse_error">An error has occurred. Try later!</string>
+
+    <string name="alertDialog_gps_title" translatable="false">GPS is settings</string>
+    <string name="alertDialog_gps_message">GPS is not enabled. Do you want to go to settings menu?</string>
+    <string name="alertDialog_gps_positiveButton">Settings</string>
+    <string name="alertDialog_gps_negativeButton">Cancel</string>
+    <string name="progressDialog_gps_locate">Find current location</string>
+
+    <string-array name="pref_temperature_entries" translatable="false">
+        <item>°C</item>
+        <item>°F</item>
+    </string-array>
+
+
+
 </resources>

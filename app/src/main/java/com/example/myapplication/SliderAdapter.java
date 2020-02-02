@@ -51,7 +51,17 @@ public class SliderAdapter extends
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
                 viewHolder.imageGifContainer.setVisibility(View.GONE);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.lumbinibg)
+                        .load(R.drawable.illam)
+                        .fitCenter()
+                        .into(viewHolder.imageViewBackground);
+                break;
+            case 1:
+             //   viewHolder.textViewDescription.setText("This is slider item " + position);
+                viewHolder.textViewDescription.setTextSize(16);
+                viewHolder.textViewDescription.setTextColor(Color.WHITE);
+                viewHolder.imageGifContainer.setVisibility(View.GONE);
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.lumbini)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
@@ -61,27 +71,41 @@ public class SliderAdapter extends
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
                 viewHolder.imageGifContainer.setVisibility(View.GONE);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.pokharabg)
+                        .load(R.drawable.mustang)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
-            case 4:
-             //   viewHolder.textViewDescription.setText("This is slider item " + position);
+
+            case 3:
+                //   viewHolder.textViewDescription.setText("This is slider item " + position);
                 viewHolder.textViewDescription.setTextSize(16);
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
                 viewHolder.imageGifContainer.setVisibility(View.GONE);
                 Glide.with(viewHolder.itemView)
-                        .load("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+                        .load(R.drawable.pokhara)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
+
+            case 4:
+                //   viewHolder.textViewDescription.setText("This is slider item " + position);
+                viewHolder.textViewDescription.setTextSize(16);
+                viewHolder.textViewDescription.setTextColor(Color.WHITE);
+                viewHolder.imageGifContainer.setVisibility(View.GONE);
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.rara)
+                        .fitCenter()
+                        .into(viewHolder.imageViewBackground);
+                break;
+
+
             default:
                 viewHolder.textViewDescription.setTextSize(29);
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
               //  viewHolder.textViewDescription.setText("Ohhhh! look at this!");
                 viewHolder.imageGifContainer.setVisibility(View.VISIBLE);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.lumbinibg)
+                        .load(R.drawable.lumbini)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 Glide.with(viewHolder.itemView)

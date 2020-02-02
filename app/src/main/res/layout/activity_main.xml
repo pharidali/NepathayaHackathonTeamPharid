@@ -47,7 +47,7 @@
 
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="40dp"
 
                         android:layout_marginBottom="5dp"
                         android:gravity="center"
@@ -165,7 +165,7 @@
                         android:text="Weather"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
 
@@ -216,7 +216,7 @@
                         android:text="Top Places"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
 
@@ -267,7 +267,7 @@
                         android:text="Restaurants"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
             </LinearLayout>
@@ -322,7 +322,7 @@
                         android:text="Guides"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
 
@@ -374,7 +374,7 @@
                         android:text="Cultural Sites"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
 
@@ -426,7 +426,7 @@
                         android:text="Hotels"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
             </LinearLayout>
@@ -485,7 +485,7 @@
                         android:text="Bookings"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
 
@@ -530,7 +530,7 @@
                         android:text="Emergency Services"
                         android:textColor="#fff"
                         android:textSize="10sp"
-                        android:textStyle="bold" />
+                         />
 
                 </LinearLayout>
 

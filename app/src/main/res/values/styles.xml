@@ -1,4 +1,5 @@
-<resources>
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -12,5 +13,47 @@
         <item name="colorControlNormal">#fff</item>
         <item name="android:background">@color/colorPrimary</item>
     </style>
+
+    <style name="MainLinearLayout">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <style name="MainIcon">
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginEnd" tools:targetApi="17">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginStart" tools:targetApi="17">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginLeft" tools:targetApi="17">@dimen/activity_horizontal_margin</item>
+        <item name="android:textAlignment" tools:targetApi="17">gravity</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#d84315</item>
+    </style>
+
+    <style name="MainConditions">
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginEnd" tools:targetApi="17">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginStart" tools:targetApi="17">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    <style name="ProgressBarCircle" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@android:color/white</item>
+
+    </style>
+
+    <style name="IconButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/icon_button_ripple</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
 
 </resources>

@@ -20,4 +20,8 @@
     <dimen name="slide_desc">16dp</dimen>
     <dimen name="desc_padding">40dp</dimen>
     <color name="colorview">#32000000</color>
+    <color name="swipe_red">#df5e65</color>
+    <color name="swipe_green">#42c25e</color>
+    <color name="swipe_blue">#4447da</color>
+
 </resources>
