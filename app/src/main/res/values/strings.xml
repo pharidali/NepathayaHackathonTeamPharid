@@ -73,58 +73,6 @@
     <string name="website">Website</string>
     <string name="about">About</string>
 
-    <string name="mysore_palace_hours">10:00 am - 05:30 pm</string>
-    <string name="venugopalaswamy_temple_hours">08:30 am - 04:30 pm</string>
-    <string name="grs_hours">10:30 am - 07:00 pm</string>
-    <string name="krs_hours">06:30 am - 07:30 pm</string>
-    <string name="bylakuppe_hours">09:00 am - 06:00 pm</string>
-    <string name="ranganthittu_hours">09:00 am - 06:00 pm</string>
-
-    <string name="mysore_palace_location">Mysore+Palace</string>
-    <string name="venugopalaswamy_temple_location">Venugopala+Swamy+Temple</string>
-    <string name="grs_location">GRS+Fantasy+Park</string>
-    <string name="krs_location">KrishnaRajaSagara+Dam,+Karnataka+571607</string>
-    <string name="bylakuppe_location">Namdroling+Monastery+Golden+Temple</string>
-    <string name="ranganthittu_location">Ranganathittu+Bird+Sanctuary</string>
-
-    <string name="onesta_location">Onesta</string>
-    <string name="hotel_mylari_location">Hotel+Vinayaka+Original+Mylari</string>
-    <string name="the_barge_location">The+Barge</string>
-    <string name="la_uppu_location">Grand+Mercure+Mysuru</string>
-    <string name="old_house_location">The+Old+House</string>
-    <string name="frosting_cafe_location">Frosting+cafe</string>
-    <string name="good_vibes_location">Cafe+Good+Vibes</string>
-    <string name="indra_cafe_location">Indra+Cafe+Paras+-+Vegetarian+Restaurant</string>
-
-    <string name="indra_cafe_website">http://indracafeparas.com</string>
-    <string name="good_vibes_website" />
-    <string name="frosting_cafe_website" />
-    <string name="old_house_website" />
-    <string name="la_uppu_website">https://www.accorhotels.com/gb/hotel-9306-grand-mercure-mysuru-/index.shtml</string>
-    <string name="the_barge_website">http://thebarge.in</string>
-    <string name="hotel_mylari_website" />
-    <string name="onesta_website">http://onestalove.com</string>
-
-    <string name="onesta_phone">08214851479</string>
-    <string name="hotel_mylari_phone" />
-    <string name="indra_cafe_phone">08212420236</string>
-    <string name="the_barge_phone">09741391444</string>
-    <string name="la_uppu_phone">08214021212</string>
-    <string name="old_house_phone">08212333255</string>
-    <string name="frosting_cafe_phone">07022330059</string>
-    <string name="good_vibes_phone">08212978124</string>
-
-    <string name="indian">Indian</string>
-    <string name="italian">Italian</string>
-    <string name="chinese">Chinese</string>
-    <string name="cafe">Cafe</string>
-
-    <string name="gokulam">Gokulam</string>
-    <string name="doora">Doora</string>
-    <string name="vijaynagar">Vijaynagar</string>
-    <string name="bannimantap">Bannimantap</string>
-    <string name="chamrajpura">Chamrajpura</string>
-
     <string name="reviewCount">(%1$s)</string>
 
     <string name="navikotsava">Navikotsava</string>
@@ -195,21 +143,21 @@
     </string-array>
 
     <string-array name="placeHours">
-        <item>@string/mysore_palace_hours</item>
-        <item>@string/venugopalaswamy_temple_hours</item>
-        <item>@string/grs_hours</item>
-        <item>@string/krs_hours</item>
-        <item>@string/bylakuppe_hours</item>
-        <item>@string/ranganthittu_hours</item>
+        <item>10:00 am - 05:30 pm</item>
+        <item>9:00 am - 07:30 pm</item>
+        <item>10:00 am - 09:30 pm</item>
+        <item>7:00 am - 05:30 pm</item>
+        <item>10:30 am - 04:30 pm</item>
+        <item>6:00 am - 05:30 pm</item>
     </string-array>
 
     <string-array name="placeLocation">
-        <item>@string/mysore_palace_location</item>
-        <item>@string/venugopalaswamy_temple_location</item>
-        <item>@string/grs_location</item>
-        <item>@string/krs_location</item>
-        <item>@string/bylakuppe_location</item>
-        <item>@string/ranganthittu_location</item>
+        <item>Kathmandu+City</item>
+        <item>pokhara</item>
+        <item>lumbini</item>
+        <item>illam</item>
+        <item>annapurnabasecamp</item>
+        <item>mustang</item>
     </string-array>
 
 
@@ -236,25 +184,25 @@
     </string-array>
 
     <string-array name="restaurant_type">
-        <item>@string/italian</item>
-        <item>@string/indian</item>
-        <item>@string/chinese</item>
-        <item>@string/indian</item>
-        <item>@string/italian</item>
-        <item>@string/cafe</item>
-        <item>@string/italian</item>
-        <item>@string/indian</item>
+        <item>Nepali</item>
+        <item>Indian</item>
+        <item>Chinese</item>
+        <item>American</item>
+        <item>Turkish</item>
+        <item>Nepali</item>
+        <item>japanese</item>
+        <item>Australian</item>
     </string-array>
 
     <string-array name="restaurant_place">
-        <item>@string/gokulam</item>
-        <item>@string/doora</item>
-        <item>@string/vijaynagar</item>
-        <item>@string/bannimantap</item>
-        <item>@string/chamrajpura</item>
-        <item>@string/gokulam</item>
-        <item>@string/chamrajpura</item>
-        <item>@string/chamrajpura</item>
+        <item>Butwal - 5</item>
+        <item>Amarpath</item>
+        <item>laxminagar</item>
+        <item>Traffic Chowk</item>
+        <item>Thamel</item>
+        <item>Milanchowk</item>
+        <item>Kalikanagar</item>
+        <item>Lumbini</item>
     </string-array>
 
     <array name="restaurant_rating">
@@ -280,36 +228,36 @@
     </array>
 
     <string-array name="restaurant_location">
-        <item>@string/onesta_location</item>
-        <item>@string/hotel_mylari_location</item>
-        <item>@string/the_barge_location</item>
-        <item>@string/la_uppu_location</item>
-        <item>@string/old_house_location</item>
-        <item>@string/frosting_cafe_location</item>
-        <item>@string/good_vibes_location</item>
-        <item>@string/indra_cafe_location</item>
+        <item>Butwal - 5</item>
+        <item>Amarpath</item>
+        <item>laxminagar</item>
+        <item>Traffic Chowk</item>
+        <item>Thamel</item>
+        <item>Milanchowk</item>
+        <item>Kalikanagar</item>
+        <item>Lumbini</item>
     </string-array>
 
     <string-array name="restaurant_phone">
-        <item>@string/onesta_phone</item>
-        <item>@string/hotel_mylari_phone</item>
-        <item>@string/the_barge_phone</item>
-        <item>@string/la_uppu_phone</item>
-        <item>@string/old_house_phone</item>
-        <item>@string/frosting_cafe_phone</item>
-        <item>@string/good_vibes_phone</item>
-        <item>@string/indra_cafe_phone</item>
+        <item>9868606202</item>
+        <item>9868606202</item>
+        <item>9868606202</item>
+        <item>9868606202</item>
+        <item>9868606202</item>
+        <item>9868606202</item>
+        <item>9868606202</item>
+        <item>9868606202</item>
     </string-array>
 
     <string-array name="restaurant_website">
-        <item>@string/onesta_website</item>
-        <item>@string/hotel_mylari_website</item>
-        <item>@string/the_barge_website</item>
-        <item>@string/la_uppu_website</item>
-        <item>@string/old_house_website</item>
-        <item>@string/frosting_cafe_website</item>
-        <item>@string/good_vibes_website</item>
-        <item>@string/indra_cafe_website</item>
+        <item>www.mealrobe.com</item>
+        <item>www.mealrobe.com</item>
+        <item>www.mealrobe.com</item>
+        <item>www.mealrobe.com</item>
+        <item>www.mealrobe.com</item>
+        <item>www.mealrobe.com</item>
+        <item>www.mealrobe.com</item>
+        <item>www.mealrobe.com</item>
     </string-array>
 
     <string-array name="event_name">
