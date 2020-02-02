@@ -14,10 +14,24 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tab">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical">
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/click"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="10dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
@@ -25,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="48dp">
+        android:layout_marginRight="20dp">
 
 <LinearLayout
     android:layout_width="fill_parent"
@@ -36,13 +50,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
 
             android:layout_marginRight="10dp"
-            android:background="@android:color/background_dark"
+            android:background="@drawable/tuliphotel"
             android:contentDescription="Book name" />
 
         <LinearLayout
@@ -63,22 +78,22 @@
                 android:textStyle="bold" />
 
 
-
             <TextView
                 android:layout_width="wrap_content"
 
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:gravity="left"
-                android:text="Location"
+                android:text="Location : Drivertole"
                 android:textSize="15sp" />
+
             <TextView
                 android:layout_width="wrap_content"
 
                 android:layout_height="wrap_content"
 
                 android:gravity="left"
-                android:text="Rating"
+                android:text="Rating : 4.5"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -88,7 +103,7 @@
             android:layout_gravity="right|center_vertical"
             android:gravity="right"
 
-            android:text="Rs 5000"
+            android:text="Rs 1200"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -99,7 +114,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="10dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
@@ -107,7 +122,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="48dp">
+        android:layout_marginRight="20dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -118,13 +133,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
 
                     android:layout_marginRight="10dp"
-                    android:background="@android:color/background_dark"
+                    android:background="@drawable/dreamland"
                     android:contentDescription="Book name" />
 
                 <LinearLayout
@@ -139,11 +155,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:gravity="left"
-                        android:text="Dreamland Gold Resort"
+                        android:text="Dreamland Gold"
                         android:textAllCaps="true"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
 
 
                     <TextView
@@ -152,15 +167,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:gravity="left"
-                        android:text="Location"
+                        android:text="Location : Bhairahawa"
                         android:textSize="15sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
 
                         android:gravity="left"
-                        android:text="Rating"
+                        android:text="Rating : 4.7"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -170,7 +186,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:gravity="right"
 
-                    android:text="Rs 5000"
+                    android:text="Rs 1980"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -181,7 +197,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="10dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
@@ -189,7 +205,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="48dp">
+        android:layout_marginRight="20dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -200,13 +216,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
 
                     android:layout_marginRight="10dp"
-                    android:background="@android:color/background_dark"
+                    android:background="@drawable/asianhotel"
                     android:contentDescription="Book name" />
 
                 <LinearLayout
@@ -227,22 +244,22 @@
                         android:textStyle="bold" />
 
 
-
                     <TextView
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:gravity="left"
-                        android:text="Location"
+                        android:text="Location : Drivertole"
                         android:textSize="15sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
 
                         android:gravity="left"
-                        android:text="Rating"
+                        android:text="Rating : 4.5"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -252,7 +269,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:gravity="right"
 
-                    android:text="Rs 5000"
+                    android:text="Rs 1450"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -263,7 +280,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="10dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
@@ -271,7 +288,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="48dp">
+        android:layout_marginRight="20dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -282,13 +299,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
 
                     android:layout_marginRight="10dp"
-                    android:background="@android:color/background_dark"
+                    android:background="@drawable/jhimahotel"
                     android:contentDescription="Book name" />
 
                 <LinearLayout
@@ -309,22 +327,22 @@
                         android:textStyle="bold" />
 
 
-
                     <TextView
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:gravity="left"
-                        android:text="Location"
+                        android:text="Location : Traffic Chowk"
                         android:textSize="15sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
 
                         android:gravity="left"
-                        android:text="Rating"
+                        android:text="Rating : 4.1"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -334,7 +352,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:gravity="right"
 
-                    android:text="Rs 5000"
+                    android:text="Rs 980"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -345,7 +363,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="10dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
@@ -353,7 +371,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="48dp">
+        android:layout_marginRight="20dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -364,13 +382,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
 
                     android:layout_marginRight="10dp"
-                    android:background="@android:color/background_dark"
+                    android:background="@drawable/hotelsindur"
                     android:contentDescription="Book name" />
 
                 <LinearLayout
@@ -391,22 +410,22 @@
                         android:textStyle="bold" />
 
 
-
                     <TextView
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:gravity="left"
-                        android:text="Location"
+                        android:text="Location : LaxmiNagar"
                         android:textSize="15sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
 
                         android:gravity="left"
-                        android:text="Rating"
+                        android:text="Rating : 4.9"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -416,7 +435,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:gravity="right"
 
-                    android:text="Rs 5000"
+                    android:text="Rs 890"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -428,7 +447,7 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="10dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
@@ -436,7 +455,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="48dp">
+        android:layout_marginRight="20dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -447,6 +466,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/profile_pic"
                     android:layout_width="80dp"
@@ -454,7 +474,7 @@
                     android:layout_gravity="center"
 
                     android:layout_marginRight="10dp"
-                    android:background="@android:color/background_dark"
+                    android:background="@drawable/hotellaxmi"
                     android:contentDescription="Book name" />
 
                 <LinearLayout
@@ -476,7 +496,6 @@
                         android:textStyle="bold" />
 
 
-
                     <TextView
                         android:id="@+id/idloc"
                         android:layout_width="wrap_content"
@@ -484,8 +503,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:gravity="left"
-                        android:text="Location"
+                        android:text="Location : Kalikanagar"
                         android:textSize="15sp" />
+
                     <TextView
                         android:id="@+id/idrating"
                         android:layout_width="wrap_content"
@@ -493,7 +513,7 @@
                         android:layout_height="wrap_content"
 
                         android:gravity="left"
-                        android:text="Rating"
+                        android:text="Rating : 3.9"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -504,13 +524,16 @@
                     android:layout_gravity="right|center_vertical"
                     android:gravity="right"
 
-                    android:text="Rs 5000"
+                    android:text="Rs 1350"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg2"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -20,7 +23,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="160dp"
             android:layout_marginTop="20dp"
             android:orientation="vertical"
             android:paddingLeft="15dp"
@@ -33,9 +36,9 @@
                 android:text="Destination"
 
                 android:textAllCaps="true"
-                android:textSize="15dp"
+                android:textColor="@color/mr_cast_progressbar_background_light"
 
-                />
+                android:textSize="15dp" />
 
             <LinearLayout
                 android:id="@+id/l1"
@@ -48,10 +51,10 @@
 
                 <ImageView
                     android:id="@+id/ig"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="60dp"
                     android:gravity="center"
-                    android:src="@android:drawable/ic_menu_mapmode" />
+                    android:src="@drawable/address" />
 
                 <EditText
                     android:id="@+id/etcity"
@@ -63,7 +66,7 @@
                     android:background="#00000000"
                     android:gravity="center_vertical"
                     android:text="Butwal"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/white"
 
                     android:textSize="32dp" />
             </LinearLayout>
@@ -99,12 +102,13 @@
                     android:background="#00000000"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="Latitiude"
+                    android:hint="1 Room"
                     android:inputType="numberDecimal"
 
                     android:padding="10dp"
-                    android:textColorHint="@android:color/black"
+                    android:textColor="@color/mr_cast_progressbar_background_light"
 
+                    android:textColorHint="@color/mr_cast_progressbar_background_light"
                     android:textSize="20dp" />
 
                 <EditText
@@ -118,11 +122,12 @@
                     android:background="#00000000"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="Longitude"
+                    android:hint="2 Guests"
                     android:inputType="numberDecimal"
                     android:padding="10dp"
                     android:scrollHorizontally="true"
-                    android:textColorHint="@android:color/black"
+                    android:textColor="@color/mr_cast_progressbar_background_light"
+                    android:textColorHint="@color/mr_cast_progressbar_background_light"
                     android:textSize="20dp" />
 
             </LinearLayout>
@@ -185,6 +190,7 @@
                     android:layout_height="wrap_content"
                     android:text="Check-in"
                     android:textAllCaps="true"
+                    android:textColor="@color/mr_cast_progressbar_background_light"
                     android:textSize="15dp" />
 
 
@@ -194,7 +200,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Feb 14,2020"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -225,6 +231,7 @@
                     android:layout_height="wrap_content"
                     android:text="Check-out"
                     android:textAllCaps="true"
+                    android:textColor="@color/mr_cast_progressbar_background_light"
                     android:textSize="15dp" />
 
 
@@ -234,7 +241,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Feb 15,2020"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -251,6 +258,520 @@
             android:layout_marginRight="15dp"
             android:background="@android:drawable/divider_horizontal_textfield" />
         />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tab">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Amenities"
+
+                    android:textColor="@color/mr_cast_progressbar_background_light"
+
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:drawable/divider_horizontal_textfield" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:id="@+id/checkin">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/icheckin" />
+
+                        <TextView
+                            android:id="@+id/tcheckin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="CheckIn"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/ibar"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Bar"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:id="@+id/checkin">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/icheckout"
+                            
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tcheckout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="CheckOut"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ibiz"
+                            
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tbiz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Biz"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:id="@+id/checkin">
+
+                        <ImageView
+                            android:id="@+id/icoffee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tcoffee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="39dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Coffee"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/icreditcard"
+                            android:layout_height="wrap_content"
+                            
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tcreditcard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Credit-Card"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+
+                        android:orientation="horizontal"
+                        android:id="@+id/checkin">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/ielevator"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/televator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Elevator"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/inewspaper"
+                            
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tnewspaper"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Free Newspaper"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:id="@+id/checkin">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/ihealth"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/thealth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Health"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/internet"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tinternet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Internet"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/ilaundary" />
+
+                        <TextView
+                            android:id="@+id/tlaundary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Laundry"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/iparking"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tparking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Parking"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:id="@+id/checkin">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ipickup"
+                            
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tpickup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="PickUp"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/ipureveg" />
+
+                        <TextView
+                            android:id="@+id/tpureveg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:padding="5dp"
+                            android:text="PureVeg"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:id="@+id/checkin">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/irest" />
+
+                        <TextView
+                            android:id="@+id/trest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Restaurant"
+                            android:textColor="@color/main_green_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:id="@+id/iswim" />
+
+                        <TextView
+                            android:id="@+id/tswim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:text="Swimming Pool"
+                            android:textColor="@color/mr_cast_progressbar_background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        </RelativeLayout>
     </LinearLayout>
 
 
@@ -269,4 +790,15 @@
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Search for a Restaurants ! "
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 </RelativeLayout>

@@ -82,6 +82,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        LinearLayout hotel = (LinearLayout) findViewById(R.id.hotels);
+        hotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, HotelActivity.class);
+                startActivity(i);
+
+            }
+        });
+
         LinearLayout restaurants = (LinearLayout) findViewById(R.id.restaurants);
         restaurants.setOnClickListener(new View.OnClickListener() {
             @Override

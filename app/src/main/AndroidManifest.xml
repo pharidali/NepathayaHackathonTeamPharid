@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:icon">
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
@@ -68,6 +69,10 @@
         <activity android:name=".EventActivity" >
 
         </activity>
+        <activity android:name=".HotelActivity"
+            android:label="Hotel Search"/>
+        <activity android:name=".HotelResult"
+            android:label="Hotel Search"/>
 
         <service android:name=".service.NotificationService" />
 
