@@ -1,23 +1,57 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
+import com.google.android.material.navigation.NavigationView;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
     SliderView sliderView;
 
+  //  Toolbar
+    Window window;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        Toolbar toolbar = initToolbar();
+        initDrawer(toolbar);
+        initNavigationView();
+
+
+        window = getWindow();
+
+//= MainActivity.getWindow();
+// clear FLAG_TRANSLUCENT_STATUS flag:
+      //  Window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+// finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));
 
         sliderView = findViewById(R.id.imageSlider);
 
@@ -42,4 +76,88 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    private void initNavigationView(){
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+
+        if (id == R.id.nav_home){
+            startActivity(new Intent(this, MainActivity.class));
+        }
+        else if (id == R.id.nav_share) {
+            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            String shareBody = "Best Free Vpn app download now. https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName();
+            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Share App");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+            startActivity(Intent.createChooser(sharingIntent, "Share via"));
+        }else if (id == R.id.rate_us) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getApplicationContext().getPackageName())));
+        }
+        else if (id == R.id.about_me) {
+          //  aboutMyApp();
+
+        }
+
+
+        else if (id == R.id.privacypolicy) {
+           // startActivity(new Intent(MainActivity.this, TOSActivity.class));
+
+        }
+
+        else if (id == R.id.moreapp) {
+
+            Uri uri = Uri.parse("https://play.google.com/store/apps/dev?id=8774282826145816300");
+            Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+            try {
+                startActivity(goToMarket);
+            } catch (ActivityNotFoundException e) {
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://play.google.com/store/apps/dev?id=8774282826145816300")));
+            }
+
+
+        }
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
+
+    private void initDrawer(Toolbar toolbar) {
+        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        drawer.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerClosed(View drawerView) {
+
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+
+            }
+        });
+        toggle.syncState();
+    }
+
+    private Toolbar initToolbar() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        return toolbar;
+    }
+
 }
