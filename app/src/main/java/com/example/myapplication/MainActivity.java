@@ -71,6 +71,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
+        LinearLayout topplaces = (LinearLayout) findViewById(R.id.topplaces);
+        topplaces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, TopPlacesActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+        LinearLayout restaurants = (LinearLayout) findViewById(R.id.restaurants);
+        restaurants.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, RestaurantsActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+
     }
     private void initNavigationView(){
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);

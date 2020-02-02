@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#015757</color>
-    <color name="colorPrimaryDark">#015757</color>
     <color name="colorAccent">#015757</color>
     <color name="white">#fff</color>
 
     <color name="nav_draw_icon">#747d87</color>
 
 
-    <dimen name="nav_header_height">160dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="dots_height">30dp</dimen>
-    <dimen name="dots_margin_bottom">20dp</dimen>
-    <dimen name="img_width_height">120dp</dimen>
-    <dimen name="slide_title">30dp</dimen>
-    <dimen name="slide_desc">16dp</dimen>
-    <dimen name="desc_padding">40dp</dimen>
     <color name="colorview">#32000000</color>
-    <color name="swipe_red">#df5e65</color>
+    <color name="swipe_red">#DF5E65</color>
     <color name="swipe_green">#42c25e</color>
     <color name="swipe_blue">#4447da</color>
 

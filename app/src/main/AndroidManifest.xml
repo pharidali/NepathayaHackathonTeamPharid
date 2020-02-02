@@ -59,6 +59,9 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
+        <activity android:name=".TopPlacesActivity" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".RestaurantsActivity" />
 
         <service android:name=".service.NotificationService" />
 

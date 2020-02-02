@@ -4,7 +4,9 @@ import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -12,8 +14,15 @@ import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
+import android.renderscript.Allocation;
+import android.renderscript.Element;
+import android.renderscript.RenderScript;
+import android.renderscript.ScriptIntrinsicBlur;
 import android.text.format.DateFormat;
 
+import com.example.myapplication.DetailsActivity;
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 import java.net.MalformedURLException;
@@ -21,10 +30,22 @@ import java.net.URL;
 import java.util.Date;
 import java.util.regex.Pattern;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.view.ViewCompat;
 import androidx.preference.PreferenceManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.myapplication.BuildConfig;
+import com.example.myapplication.model.Place;
+import com.example.myapplication.model.Restaurant;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -32,7 +53,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 
+import static com.example.myapplication.DetailsActivity.INTENT_EXTRA;
+
 public class Utils {
+    private static final float BLUR_RADIUS = 25f;
+
     public static AlertDialog mAlertDialog;
     public static final String OPEN_WEATHER_MAP_API_KEY = "1487dd8a93bfd85d278d9ac8dcfee94c";
 
@@ -284,5 +309,90 @@ public class Utils {
     public static String sanitizeName(String str) {
         return str.replaceAll("\\W+", "_").replaceAll("^_+", "").replaceAll("_+$", "");
     }
+
+
+    //blur image using RenderScript API
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+    public static Bitmap blur(Context context, Bitmap image) {
+        if (null == image) return null;
+
+        Bitmap outputBitmap = Bitmap.createBitmap(image);
+        final RenderScript renderScript = RenderScript.create(context);
+        Allocation tmpIn = Allocation.createFromBitmap(renderScript, image);
+        Allocation tmpOut = Allocation.createFromBitmap(renderScript, outputBitmap);
+
+        //Intrinsic Gausian blur filter
+        ScriptIntrinsicBlur theIntrinsic = ScriptIntrinsicBlur.create(renderScript, Element.U8_4(renderScript));
+        theIntrinsic.setRadius(BLUR_RADIUS);
+        theIntrinsic.setInput(tmpIn);
+        theIntrinsic.forEach(tmpOut);
+        tmpOut.copyTo(outputBitmap);
+        return outputBitmap;
+    }
+
+    //set common properties for RecyclerView
+    public static void setUpRecyclerView(RecyclerView recyclerView) {
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setNestedScrollingEnabled(false);
+        recyclerView.setItemViewCacheSize(10);
+    }
+
+    //set toolbar for detail fragments
+    public static void setUpToolbar(Context context, Toolbar toolbar, String title) {
+        if (context != null) {
+            ((AppCompatActivity) context).setSupportActionBar(toolbar);
+            ActionBar actionBar = ((AppCompatActivity) context).getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.setTitle(title);
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setDisplayShowHomeEnabled(true);
+            }
+
+        }
+    }
+
+    public static void fireIntent(Context context, Object object, ImageView image) {
+        Intent intent = new Intent(context, DetailsActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) context, image, ViewCompat.getTransitionName(image));
+        if (object instanceof Place) {
+            Place place = (Place) object;
+            intent.putExtra(INTENT_EXTRA, place);
+        } else if (object instanceof Restaurant) {
+            Restaurant restaurant = (Restaurant) object;
+            intent.putExtra(INTENT_EXTRA, restaurant);
+        } //else if (object instanceof Shop) {
+           // Shop shop = (Shop) object;
+            //intent.putExtra(INTENT_EXTRA, shop);
+       // }
+        context.startActivity(intent, options.toBundle());
+    }
+
+    public static void directionsIntent(Context context, String location) {
+        if (location.length() <= 0) {
+            Toast.makeText(context, R.string.no_location, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q="+location));
+        intent.setPackage("com.google.android.apps.maps");
+        context.startActivity(intent);
+    }
+    public static void phoneIntent(Context context, String phone) {
+        if (phone.length() <= 0) {
+            Toast.makeText(context, R.string.no_phone, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phone));
+        context.startActivity(intent);
+    }
+    public static void websiteIntent(Context context, String website) {
+        if (website.length() <= 0) {
+            Toast.makeText(context, R.string.no_website, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
+        context.startActivity(intent);
+    }
+
+
 
 }
