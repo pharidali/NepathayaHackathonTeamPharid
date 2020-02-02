@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         sliderView = findViewById(R.id.imageSlider);
 
         final SliderAdapter adapter = new SliderAdapter(this);
-        adapter.setCount(5);
+        adapter.setCount(4);
 
         sliderView.setSliderAdapter(adapter);
 
