@@ -23,17 +23,20 @@
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
+
         </activity>
 
 
         <activity android:name=".SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
 
         </activity>
         <activity android:name=".LoginActivity" />
@@ -62,6 +65,9 @@
         <activity android:name=".TopPlacesActivity" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".RestaurantsActivity" />
+        <activity android:name=".EventActivity" >
+
+        </activity>
 
         <service android:name=".service.NotificationService" />
 

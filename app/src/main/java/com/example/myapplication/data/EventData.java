@@ -8,10 +8,6 @@ import java.util.ArrayList;
 import com.example.myapplication.R;
 import com.example.myapplication.model.Event;
 
-/*
-define methods to fetch data for Events
-each event has a name, place, date, time and a url to open a browser activity for more details using intent
- */
 public class EventData {
     public static ArrayList<Event> fetchEvents(Context context) {
 
