@@ -39,6 +39,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -116,6 +118,10 @@ public class WeatherActivity extends AppCompatActivity implements AppBarLayout.O
         setContentView(R.layout.activity_weather);
 
 
+        Window window = getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(ContextCompat.getColor(WeatherActivity.this,R.color.colorPrimary));
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
