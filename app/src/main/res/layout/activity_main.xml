@@ -305,7 +305,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/guide" />
+                        app:srcCompat="@drawable/calendar" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -496,6 +496,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/sos"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="20"
@@ -511,7 +512,6 @@
                         app:srcCompat="@drawable/alarm" />
 
                     <TextView
-                        android:id="@+id/notifs_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"

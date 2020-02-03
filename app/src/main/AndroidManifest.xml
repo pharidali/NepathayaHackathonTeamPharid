@@ -73,6 +73,8 @@
             android:label="Hotel Search"/>
         <activity android:name=".HotelResult"
             android:label="Hotel Search"/>
+        <activity android:name=".EmergencyActivity"
+            android:label="Emergency Line"/>
 
         <service android:name=".service.NotificationService" />
 

@@ -104,6 +104,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        LinearLayout sos = (LinearLayout) findViewById(R.id.sos);
+        sos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, EmergencyActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+
         LinearLayout events = (LinearLayout) findViewById(R.id.events);
         events.setOnClickListener(new View.OnClickListener() {
             @Override
