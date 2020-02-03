@@ -104,6 +104,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        LinearLayout flightbook = (LinearLayout) findViewById(R.id.flightbook);
+        flightbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, PlaneTicketActivity.class);
+                startActivity(i);
+
+            }
+        });
+
         LinearLayout sos = (LinearLayout) findViewById(R.id.sos);
         sos.setOnClickListener(new View.OnClickListener() {
             @Override

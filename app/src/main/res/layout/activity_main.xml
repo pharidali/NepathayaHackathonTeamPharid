@@ -435,6 +435,7 @@
                     android:orientation="vertical"></LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/flightbook"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="20"
@@ -459,20 +460,18 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/battery_saver_btn"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:scaleType="fitCenter"
                         app:srcCompat="@drawable/note" />
 
                     <TextView
-                        android:id="@+id/saver_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:fontFamily="@font/montserrat"
                         android:gravity="center"
-                        android:text="Bookings"
+                        android:text="Flight Booking"
                         android:textColor="#fff"
                         android:textSize="10sp"
                          />

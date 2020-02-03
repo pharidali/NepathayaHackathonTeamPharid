@@ -15,7 +15,7 @@ import androidx.core.content.ContextCompat;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
-public class HotelResult extends AppCompatActivity {
+public class PlaneTicketActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class HotelResult extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimary));
 
-        setContentView(R.layout.row_hotel);
+        setContentView(R.layout.activity_planeticket);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -35,11 +35,11 @@ public class HotelResult extends AppCompatActivity {
         }
 
 
-       CardView browse = (CardView) findViewById(R.id.click);
+        Button browse = (Button) findViewById(R.id.button);
         browse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new SweetAlertDialog(HotelResult.this, SweetAlertDialog.WARNING_TYPE)
+                new SweetAlertDialog(PlaneTicketActivity.this, SweetAlertDialog.WARNING_TYPE)
                         .setTitleText("Are you sure?")
                         .setContentText("Won't be able to cancel this action!")
                         .setConfirmText("Yes, Book it for me!")
@@ -56,7 +56,7 @@ public class HotelResult extends AppCompatActivity {
                                                     @Override
                                                     public void onClick(SweetAlertDialog sDialog) {
 
-                                                        Intent i = new Intent(HotelResult.this, MainActivity.class);
+                                                        Intent i = new Intent(PlaneTicketActivity.this, MainActivity.class);
                                                         startActivity(i);
 
                                                     }
@@ -70,6 +70,8 @@ public class HotelResult extends AppCompatActivity {
 
             }
         });
+
+
 
     }
     @Override

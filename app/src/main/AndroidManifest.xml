@@ -76,6 +76,10 @@
         <activity android:name=".EmergencyActivity"
             android:label="Emergency Line"/>
 
+        <activity android:name=".PlaneTicketActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Flight Booking"/>
+
         <service android:name=".service.NotificationService" />
 
 
