@@ -1,10 +1,11 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.myapplication.R;
 import com.example.myapplication.fragment.PlaceDetailFragment;
 import com.example.myapplication.fragment.RestaurantDetailFragment;
 import com.example.myapplication.model.Place;

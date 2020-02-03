@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import com.example.myapplication.R;
 import com.example.myapplication.model.NameModel;
 import com.example.myapplication.model.DataValuesModel;
 

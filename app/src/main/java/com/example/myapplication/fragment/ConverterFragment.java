@@ -19,8 +19,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.myapplication.ApiController;
-import com.example.myapplication.CurrenciesActivity;
+import com.example.myapplication.base.ApiController;
+import com.example.myapplication.activity.CurrenciesActivity;
 import com.example.myapplication.R;
 
 import org.json.JSONException;

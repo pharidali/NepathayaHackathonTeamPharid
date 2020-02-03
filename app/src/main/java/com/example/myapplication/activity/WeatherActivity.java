@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -22,15 +22,16 @@ import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
 import androidx.annotation.NonNull;
+
+import com.example.myapplication.base.ConnectionDetector;
+import com.example.myapplication.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.NavUtils;
 import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;

@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,10 +10,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.myapplication.fragment.EventFragment;
+import com.example.myapplication.R;
 import com.example.myapplication.fragment.RestaurantFragment;
 
-public class EventActivity extends AppCompatActivity {
+public class RestaurantsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class EventActivity extends AppCompatActivity {
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimary));
+        window.setStatusBarColor(ContextCompat.getColor(RestaurantsActivity.this, R.color.colorPrimary));
 
         setContentView(R.layout.activity_places);
 
@@ -34,9 +34,9 @@ public class EventActivity extends AppCompatActivity {
 
 
         final FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().add(R.id.container, new EventFragment()).commit();
+        fragmentManager.beginTransaction().add(R.id.container, new RestaurantFragment()).commit();
         //set the title for the activity based on the current fragment
-        setTitle("Events Near");
+        setTitle("Restaurants");
 
 
     }
@@ -45,7 +45,7 @@ public class EventActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
-                //   NavUtils.navigateUpFromSameTask(this);
+             //   NavUtils.navigateUpFromSameTask(this);
                 return true;
         }
 

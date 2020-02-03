@@ -19,8 +19,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.example.myapplication.ApiController;
-import com.example.myapplication.MainActivity;
+import com.example.myapplication.base.ApiController;
+import com.example.myapplication.activity.MainActivity;
 import com.example.myapplication.R;
 
 import org.json.JSONException;
@@ -34,7 +34,7 @@ import java.util.Comparator;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
-import com.example.myapplication.ListAdapter;
+import com.example.myapplication.adapter.ListAdapter;
 import com.example.myapplication.model.NameModel;
 import com.example.myapplication.model.ValuesModel;
 import com.example.myapplication.model.CurrencyModel;

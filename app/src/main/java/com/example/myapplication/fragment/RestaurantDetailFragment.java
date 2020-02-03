@@ -19,7 +19,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.model.Restaurant;
 import com.example.myapplication.util.Utils;
 
-import static com.example.myapplication.DetailsActivity.INTENT_EXTRA;
+import static com.example.myapplication.activity.DetailsActivity.INTENT_EXTRA;
 
 public class RestaurantDetailFragment extends Fragment implements View.OnClickListener {
 

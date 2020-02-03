@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.adapter;
 
 import com.example.myapplication.model.CitySearch;
 import com.example.myapplication.model.Weather;

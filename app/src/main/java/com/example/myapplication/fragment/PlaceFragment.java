@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.PlaceAdapter;
+import com.example.myapplication.adapter.PlaceAdapter;
 import com.example.myapplication.R;
 import com.example.myapplication.data.PlaceData;
 import com.example.myapplication.util.Utils;

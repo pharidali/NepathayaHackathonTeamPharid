@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,18 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.myapplication.fragment.TabFragment;
-import es.dmoral.prefs.Prefs;
+import com.example.myapplication.R;
+import com.example.myapplication.fragment.EventFragment;
+import com.example.myapplication.fragment.RestaurantFragment;
 
-public class CurrencyConverterActivity extends AppCompatActivity {
-
-    FragmentManager mFragmentManager;
-    FragmentTransaction mFragmentTransaction;
-
-
-    int intro_value;
+public class EventActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +22,9 @@ public class CurrencyConverterActivity extends AppCompatActivity {
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(CurrencyConverterActivity.this,R.color.colorPrimary));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
 
-
-        setContentView(R.layout.fragment_currencyconverter);
+        setContentView(R.layout.activity_places);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,15 +34,13 @@ public class CurrencyConverterActivity extends AppCompatActivity {
         }
 
 
-     //   Float abc = getAPIVerison();
-        intro_value = Prefs.with(CurrencyConverterActivity.this).readInt("intro_key");
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().add(R.id.container, new EventFragment()).commit();
+        //set the title for the activity based on the current fragment
+        setTitle("Events Near");
 
-        mFragmentManager = getSupportFragmentManager();
-        mFragmentTransaction = mFragmentManager.beginTransaction();
-        mFragmentTransaction.replace(R.id.containerView, new TabFragment()).commit();
 
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -61,6 +52,8 @@ public class CurrencyConverterActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
 }
 

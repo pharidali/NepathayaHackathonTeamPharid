@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.EventAdapter;
+import com.example.myapplication.adapter.EventAdapter;
 import com.example.myapplication.R;
 import com.example.myapplication.data.EventData;
 import com.example.myapplication.util.Utils;

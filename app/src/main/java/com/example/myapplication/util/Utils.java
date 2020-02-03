@@ -3,16 +3,9 @@ import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.ColorFilter;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.renderscript.Allocation;
@@ -21,8 +14,7 @@ import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.text.format.DateFormat;
 
-import com.example.myapplication.DetailsActivity;
-import com.example.myapplication.MainActivity;
+import com.example.myapplication.activity.DetailsActivity;
 import com.example.myapplication.R;
 
 import java.net.MalformedURLException;
@@ -53,7 +45,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 
-import static com.example.myapplication.DetailsActivity.INTENT_EXTRA;
+import static com.example.myapplication.activity.DetailsActivity.INTENT_EXTRA;
 
 public class Utils {
     private static final float BLUR_RADIUS = 25f;

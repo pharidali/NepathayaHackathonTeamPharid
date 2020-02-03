@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.RestaurantAdapter;
+import com.example.myapplication.adapter.RestaurantAdapter;
 import com.example.myapplication.data.RestaurantData;
 import com.example.myapplication.util.Utils;
 

@@ -1,6 +1,5 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,8 +9,9 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
+
+import com.example.myapplication.R;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -23,7 +23,7 @@ public class EmergencyActivity extends AppCompatActivity {
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimary));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
 
         setContentView(R.layout.activity_emergency);
 

@@ -16,7 +16,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.model.Place;
 import com.example.myapplication.util.Utils;
 
-import static com.example.myapplication.DetailsActivity.INTENT_EXTRA;
+import static com.example.myapplication.activity.DetailsActivity.INTENT_EXTRA;
 
 
 public class PlaceDetailFragment extends Fragment implements View.OnClickListener {

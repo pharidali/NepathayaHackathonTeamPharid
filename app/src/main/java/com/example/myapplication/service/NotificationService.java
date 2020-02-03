@@ -12,15 +12,15 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.SystemClock;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
+
 import android.util.Log;
 
-import com.example.myapplication.ConnectionDetector;
+import com.example.myapplication.base.ConnectionDetector;
 import com.example.myapplication.R;
-import com.example.myapplication.WeatherJSONParser;
-import com.example.myapplication.WeatherRequest;
+import com.example.myapplication.adapter.WeatherJSONParser;
+import com.example.myapplication.adapter.WeatherRequest;
 import com.example.myapplication.model.Weather;
-import com.example.myapplication.WeatherActivity;
+import com.example.myapplication.activity.WeatherActivity;
 import com.example.myapplication.util.AppPreference;
 import com.example.myapplication.util.Constants;
 import com.example.myapplication.util.Utils;

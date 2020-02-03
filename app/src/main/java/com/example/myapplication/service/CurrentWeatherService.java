@@ -15,8 +15,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.os.Build;
 import android.util.Log;
 
-import com.example.myapplication.ConnectionDetector;
-import com.example.myapplication.R;
+import com.example.myapplication.base.ConnectionDetector;
 import com.example.myapplication.util.AppPreference;
 import com.example.myapplication.util.Constants;
 import com.example.myapplication.util.Utils;
@@ -31,8 +30,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static com.example.myapplication.WeatherActivity.mCitySearch;
-import static com.example.myapplication.WeatherActivity.mWeather;
+import static com.example.myapplication.activity.WeatherActivity.mCitySearch;
+import static com.example.myapplication.activity.WeatherActivity.mWeather;
 
 public class CurrentWeatherService extends IntentService {
 

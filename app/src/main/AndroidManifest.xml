@@ -24,14 +24,14 @@
 
         <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".activity.MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
 
         </activity>
 
 
-        <activity android:name=".SplashScreenActivity"
+        <activity android:name=".activity.SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
 
@@ -43,8 +43,8 @@
 
 
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".WeatherActivity" >
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.WeatherActivity" >
 
 
         </activity>
@@ -52,39 +52,39 @@
         <service android:name=".service.LocationUpdateService" />
 
         <activity
-            android:name=".SearchActivity"
+            android:name=".activity.SearchActivity"
             android:label="Search"
-            android:parentActivityName=".WeatherActivity">
+            android:parentActivityName=".activity.WeatherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.myapplication.WeatherActivity" />
+                android:value="com.example.myapplication.activity.WeatherActivity" />
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".TopPlacesActivity" />
-        <activity android:name=".DetailsActivity" />
-        <activity android:name=".RestaurantsActivity" />
-        <activity android:name=".EventActivity" >
+        <activity android:name=".activity.TopPlacesActivity" />
+        <activity android:name=".activity.DetailsActivity" />
+        <activity android:name=".activity.RestaurantsActivity" />
+        <activity android:name=".activity.EventActivity" >
 
         </activity>
-        <activity android:name=".HotelActivity"
+        <activity android:name=".activity.HotelActivity"
             android:label="Hotel Search"/>
-        <activity android:name=".HotelResult"
+        <activity android:name=".activity.HotelResultActivity"
             android:label="Hotel Search"/>
-        <activity android:name=".EmergencyActivity"
+        <activity android:name=".activity.EmergencyActivity"
             android:label="Emergency Line"/>
 
-        <activity android:name=".PlaneTicketActivity"
+        <activity android:name=".activity.PlaneTicketActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="Flight Booking"/>
-        <activity android:name=".CurrenciesActivity"
+        <activity android:name=".activity.CurrenciesActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".CurrencyConverterActivity"
+        <activity android:name=".activity.CurrencyConverterActivity"
             android:label="Currency Converter"
             android:theme="@style/AppTheme.NoActionBar"/>
 

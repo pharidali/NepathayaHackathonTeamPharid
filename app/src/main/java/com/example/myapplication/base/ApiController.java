@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.base;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

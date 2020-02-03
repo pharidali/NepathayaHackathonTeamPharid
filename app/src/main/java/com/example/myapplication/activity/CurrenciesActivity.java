@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -14,6 +14,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.StringTokenizer;
 
+import com.example.myapplication.base.ApiController;
+import com.example.myapplication.adapter.CurrenciesAdapter;
+import com.example.myapplication.R;
 import com.example.myapplication.model.NameModel;
 
 

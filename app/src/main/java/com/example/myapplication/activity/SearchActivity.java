@@ -1,10 +1,9 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.core.app.NavUtils;
@@ -24,6 +23,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.example.myapplication.R;
 import com.example.myapplication.model.CitySearch;
 import com.example.myapplication.util.CityParser;
 import com.example.myapplication.util.Constants;
@@ -50,7 +50,7 @@ public class SearchActivity extends AppCompatActivity {
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(SearchActivity.this,R.color.colorPrimary));
+        window.setStatusBarColor(ContextCompat.getColor(SearchActivity.this, R.color.colorPrimary));
         setContentView(R.layout.activity_search);
 
         setupActionBar();
