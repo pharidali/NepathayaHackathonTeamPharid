@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -28,8 +29,10 @@ import com.smarteist.autoimageslider.SliderView;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, TextToSpeech.OnInitListener {
     SliderView sliderView;
+
+    private TextToSpeech repeatTTS;
 
   //  Toolbar
     Window window;
@@ -63,11 +66,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 sliderView.setCurrentPagePosition(position);
             }
         });
-
+        repeatTTS = new TextToSpeech(MainActivity.this, this);
         LinearLayout weather = (LinearLayout) findViewById(R.id.weather);
         weather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+               // repeatTTS.speak("Check the weather status!",
+                     //   TextToSpeech.QUEUE_FLUSH, null);
 
                 Intent i = new Intent(MainActivity.this, WeatherActivity.class);
                 startActivity(i);
@@ -250,6 +256,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         return toolbar;
+    }
+
+    @Override
+    public void onInit(int arg0) {
+        // TODO Auto-generated method stub
     }
 
 }
