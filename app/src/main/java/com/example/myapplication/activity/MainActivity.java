@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 sliderView.setCurrentPagePosition(position);
             }
         });
+
         repeatTTS = new TextToSpeech(MainActivity.this, this);
         LinearLayout weather = (LinearLayout) findViewById(R.id.weather);
         weather.setOnClickListener(new View.OnClickListener() {
