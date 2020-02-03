@@ -16,4 +16,6 @@
     <color name="swipe_green">#42C25E</color>
     <color name="swipe_blue">#4447da</color>
 
+    <color name="off_white">#f6f6f6</color>
+    <color name="gray_Tabbed_Text_color">#b5b5b5</color>
 </resources>

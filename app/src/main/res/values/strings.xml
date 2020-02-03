@@ -300,7 +300,7 @@
         <item>@string/marathon_url</item>
     </string-array>
 
-
+    <string name="Free_CC_link">https://free.currconv.com/api/v7/convert?q=</string>
 
 
 </resources>

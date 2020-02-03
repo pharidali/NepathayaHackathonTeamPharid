@@ -21,6 +21,9 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:icon">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
@@ -79,6 +82,11 @@
         <activity android:name=".PlaneTicketActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="Flight Booking"/>
+        <activity android:name=".CurrenciesActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".CurrencyConverterActivity"
+            android:label="Currency Converter"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <service android:name=".service.NotificationService" />
 

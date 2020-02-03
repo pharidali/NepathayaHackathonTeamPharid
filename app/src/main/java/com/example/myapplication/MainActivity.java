@@ -93,6 +93,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        LinearLayout currency = (LinearLayout) findViewById(R.id.currency);
+        currency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, CurrencyConverterActivity.class);
+                startActivity(i);
+
+            }
+        });
+
         LinearLayout restaurants = (LinearLayout) findViewById(R.id.restaurants);
         restaurants.setOnClickListener(new View.OnClickListener() {
             @Override
