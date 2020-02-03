@@ -20,27 +20,15 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:icon">
-
         <uses-library android:name="org.apache.http.legacy" android:required="false" />
-
         <activity android:name=".activity.MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-
         </activity>
-
-
         <activity android:name=".activity.SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-
-
-
-
         </activity>
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.WeatherActivity" >
-
 
         </activity>
         <service android:name=".service.CurrentWeatherService" />
@@ -53,7 +41,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.myapplication.activity.WeatherActivity" />
@@ -65,7 +52,6 @@
         <activity android:name=".activity.DetailsActivity" />
         <activity android:name=".activity.RestaurantsActivity" />
         <activity android:name=".activity.EventActivity" >
-
         </activity>
         <activity android:name=".activity.HotelActivity"
             android:label="Hotel Search"/>
@@ -83,27 +69,19 @@
             android:label="Currency Converter"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.WelcomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            >
-
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-
         <service android:name=".service.NotificationService" />
-
-
         <receiver android:name=".service.Receiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>

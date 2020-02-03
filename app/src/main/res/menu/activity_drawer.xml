@@ -13,8 +13,6 @@
 
     </group>
 
-    <item android:title="Select Option">
-    <menu>
 
 
         <item
@@ -47,6 +45,4 @@
             android:title="Logout"
             android:visible="false" />
 
-    </menu>
-    </item>
 </menu>

@@ -36,10 +36,9 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_weight="100"
                     android:gravity="center"
+                    android:layout_margin="10dp"
                     android:orientation="vertical"
                     android:visibility="visible"
                     android:weightSum="100">
@@ -48,9 +47,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-
-                        android:layout_marginBottom="5dp"
                         android:gravity="center"
+                        android:layout_marginRight="25dp"
                         android:src="@drawable/lifetimeexp" />
 
                 </LinearLayout>
@@ -152,7 +150,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/pollution" />
+                        app:srcCompat="@drawable/sun2" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -162,8 +160,7 @@
                         android:gravity="center"
                         android:text="Weather"
                         android:textColor="#fff"
-                        android:textSize="10sp"
-                         />
+                        android:textSize="10sp" />
 
                 </LinearLayout>
 
@@ -538,7 +535,7 @@
             android:weightSum="100">
 
             <LinearLayout
-                android:id="@+id/advance_page"
+                android:id="@+id/explorer"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="33.33"
@@ -638,7 +635,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_weight="70"
-                    app:srcCompat="@drawable/me" />
+                    app:srcCompat="@drawable/user" />
 
                 <TextView
                     android:layout_width="match_parent"

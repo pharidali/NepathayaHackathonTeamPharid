@@ -26,6 +26,8 @@ import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawControlle
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
     SliderView sliderView;
 
@@ -79,6 +81,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 Intent i = new Intent(MainActivity.this, TopPlacesActivity.class);
                 startActivity(i);
+
+            }
+        });
+
+        LinearLayout explorer = (LinearLayout) findViewById(R.id.explorer);
+        explorer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int lan = 27;
+
+                String uri = "http://maps.google.com/maps?saddr=" + "27" + "," + "83" + "&daddr=" + "27" + "," + "83";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                intent.setPackage("com.google.android.apps.maps");
+                startActivity(intent);
 
             }
         });
